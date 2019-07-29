@@ -36,7 +36,7 @@ class CartPage extends StatelessWidget {
                       Text(
                         "\$ 450",
                         style: TextStyle(
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -48,7 +48,7 @@ class CartPage extends StatelessWidget {
                   height: 50,
                   width: 150,
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.all(
                       Radius.circular(5),
                     ),
@@ -58,7 +58,7 @@ class CartPage extends StatelessWidget {
                     child: Text(
                       "Finalizar",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                     onPressed: () => {},
@@ -114,7 +114,7 @@ Widget productItem(context) {
               Text(
                 "\$ 200",
                 style: TextStyle(
-                  color: Colors.green,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               SizedBox(

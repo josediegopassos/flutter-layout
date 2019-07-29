@@ -9,7 +9,6 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xFFF5F5F5),
           padding: EdgeInsets.only(
             top: 60,
             left: 20,
@@ -21,7 +20,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 height: 350,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).accentColor,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -46,16 +45,21 @@ class LoginPage extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 "Bem vindo",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                                style: Theme.of(context).textTheme.display2,
                               ),
-                              Text("Autenticar-me para continuar"),
+                              Text(
+                                "Autenticar-me para continuar",
+                                style: Theme.of(context).textTheme.subhead,
+                              ),
                             ],
                           ),
                           FlatButton(
-                            child: Text("Registrar"),
+                            child: Text(
+                              "Registrar",
+                              style: TextStyle(
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
                             onPressed: () {
                               Navigator.push(
                                 context,
@@ -83,6 +87,7 @@ class LoginPage extends StatelessWidget {
                         ),
                         style: TextStyle(
                           fontSize: 20,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       SizedBox(
@@ -102,13 +107,19 @@ class LoginPage extends StatelessWidget {
                         ),
                         style: TextStyle(
                           fontSize: 20,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       Container(
                         height: 40,
                         alignment: Alignment.centerRight,
                         child: FlatButton(
-                          child: Text("Esqueceu sua senha?"),
+                          child: Text(
+                            "Esqueceu sua senha?",
+                            style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
                           onPressed: () {},
                         ),
                       ),
@@ -118,7 +129,7 @@ class LoginPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
@@ -153,7 +164,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.green,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
@@ -185,7 +196,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.green,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
