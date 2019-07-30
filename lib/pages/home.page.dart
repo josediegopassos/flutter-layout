@@ -9,12 +9,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(10),
-        color: Color(0xFFF5F5F5),
+        //color: Color(0xFFF5F5F5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             SearchBox(),
             SizedBox(

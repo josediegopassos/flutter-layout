@@ -38,11 +38,14 @@ class ProductCard extends StatelessWidget {
                 ),
               );
             },
-            child: Image.asset(
-              image,
-              width: 140,
-              height: 140,
-              fit: BoxFit.cover,
+            child: Hero(
+              tag: image,
+              child: Image.asset(
+                image,
+                width: 140,
+                height: 140,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           SizedBox(
@@ -76,7 +79,7 @@ class ProductCard extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF00C569),
+              color: Theme.of(context).primaryColor,
             ),
           ),
         ],

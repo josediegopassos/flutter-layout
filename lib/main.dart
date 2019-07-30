@@ -10,6 +10,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      //theme: dartTheme(),
       theme: lightTheme(),
       home: DefaultTabController(
         length: 3,
