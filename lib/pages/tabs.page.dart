@@ -8,14 +8,14 @@ class TabsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: TabBarView(
-        children: <Widget>[
+        children: [
           HomePage(),
           CartPage(),
           LoginPage(),
         ],
       ),
       bottomNavigationBar: new TabBar(
-        tabs: <Widget>[
+        tabs: [
           Tab(
             icon: new Icon(Icons.home),
           ),

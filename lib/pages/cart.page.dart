@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/home.page.dart';
 
 class CartPage extends StatelessWidget {
   @override
@@ -14,8 +13,8 @@ class CartPage extends StatelessWidget {
             ),
           ),
           Container(
-            height: 80,
             color: Colors.black12,
+            height: 80,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -34,7 +33,7 @@ class CartPage extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        "\$ 450",
+                        "\$4250",
                         style: TextStyle(
                           color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
@@ -53,10 +52,12 @@ class CartPage extends StatelessWidget {
                       Radius.circular(5),
                     ),
                   ),
-                  margin: EdgeInsets.only(right: 20),
+                  margin: EdgeInsets.only(
+                    right: 20,
+                  ),
                   child: FlatButton(
                     child: Text(
-                      "Finalizar",
+                      "Checkout",
                       style: TextStyle(
                         color: Theme.of(context).accentColor,
                       ),
@@ -76,7 +77,6 @@ class CartPage extends StatelessWidget {
 Widget productList(context) {
   return ListView(
     children: <Widget>[
-      productItem(context),
       productItem(context),
       productItem(context),
       productItem(context),
@@ -110,9 +110,9 @@ Widget productItem(context) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Titulo"),
+              Text("Título do produto"),
               Text(
-                "\$ 200",
+                "\$200",
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                 ),

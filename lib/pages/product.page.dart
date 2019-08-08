@@ -22,7 +22,7 @@ class ProductPage extends StatelessWidget {
             SliverAppBar(
               backgroundColor: Colors.white.withOpacity(0),
               elevation: 0.0,
-              expandedHeight: 470.0,
+              expandedHeight: 500.0,
               floating: false,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
@@ -43,13 +43,14 @@ class ProductPage extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(
+                top: 10,
                 left: 10,
                 right: 10,
               ),
               child: Text(
                 title,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 26,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -61,7 +62,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Detalhes",
+                "Details",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -70,8 +71,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Produto é fabricado no polo tecnologico de Manaus,onde após a etapa de fabricção é vendido para o Brasil e para o mundo",
-              ),
+                  "Nike Dri-FIT is a polyester fabric designed to help you keep dry so you can more comfortably work harder, longer."),
             ),
           ],
         ),

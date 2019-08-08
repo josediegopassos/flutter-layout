@@ -13,25 +13,25 @@ class ProductList extends StatelessWidget {
         scrollDirection: scrollDirection,
         children: <Widget>[
           ProductCard(
-            title: "Camisa Long Sleeve",
+            title: "Nike Dry-Fit Long Sleeve",
             description: "Nike",
             image: "assets/product-10.png",
             price: 150,
           ),
           ProductCard(
-            title: "Poltrona estranha",
-            description: "Olufsen",
+            title: "BeoPlay Speaker",
+            description: "Bang and Olufsen",
             image: "assets/product-1.png",
             price: 755,
           ),
           ProductCard(
-            title: "Relógio Wristwatch",
+            title: "Leather Wristwatch",
             description: "Tag Heuer",
             image: "assets/product-2.png",
             price: 450,
           ),
           ProductCard(
-            title: "Bluetooth Speaker",
+            title: "Smart Bluetooth Speaker",
             description: "Google Inc.",
             image: "assets/product-3.png",
             price: 900,

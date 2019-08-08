@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.only(
-            top: 60,
+            top: 80,
             left: 20,
             right: 20,
             bottom: 40,
@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: 350,
+                height: 480,
                 decoration: BoxDecoration(
                   color: Theme.of(context).accentColor,
                   boxShadow: [
@@ -29,14 +29,14 @@ class LoginPage extends StatelessWidget {
                       offset: new Offset(1, 2.0),
                       blurRadius: 5,
                       spreadRadius: 1,
-                    )
+                    ),
                   ],
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    top: 10,
+                    left: 15,
+                    right: 15,
+                    top: 60,
                   ),
                   child: Form(
                     key: _formKey,
@@ -48,18 +48,18 @@ class LoginPage extends StatelessWidget {
                             Column(
                               children: <Widget>[
                                 Text(
-                                  "AXZ",
+                                  "Welcome",
                                   style: Theme.of(context).textTheme.display2,
                                 ),
                                 Text(
-                                  "de A a Z, em um só lugar",
+                                  "Sign in to continue",
                                   style: Theme.of(context).textTheme.subhead,
                                 ),
                               ],
                             ),
                             FlatButton(
                               child: Text(
-                                "Registrar",
+                                "Sign Up",
                                 style: TextStyle(
                                   color: Theme.of(context).primaryColor,
                                 ),
@@ -76,13 +76,13 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 60,
                         ),
                         TextFormField(
-                          //autofocus: true,
+                          // autofocus: true,
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
-                            labelText: "E-mail",
+                            labelText: "Email",
                             labelStyle: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w400,
@@ -95,21 +95,21 @@ class LoginPage extends StatelessWidget {
                           ),
                           validator: (value) {
                             if (value.isEmpty) {
-                              return 'E-mail inválido';
+                              return 'Invalid E-mail';
                             }
                             return null;
                           },
-                          onSaved: (input) => _password = input,
+                          onSaved: (input) => _email = input,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         TextFormField(
-                          //autofocus: true,
+                          // autofocus: true,
                           keyboardType: TextInputType.text,
                           obscureText: true,
                           decoration: InputDecoration(
-                            labelText: "Senha",
+                            labelText: "Password",
                             labelStyle: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w400,
@@ -122,7 +122,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           validator: (value) {
                             if (value.isEmpty) {
-                              return 'Senha inválida';
+                              return 'Invalid Password';
                             }
                             return null;
                           },
@@ -133,7 +133,7 @@ class LoginPage extends StatelessWidget {
                           alignment: Alignment.centerRight,
                           child: FlatButton(
                             child: Text(
-                              "Esqueceu sua senha?",
+                              "Forgot your password?",
                               style: TextStyle(
                                 color: Theme.of(context).primaryColor,
                               ),
@@ -154,7 +154,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: FlatButton(
                             child: Text(
-                              "Autenticar",
+                              "Sign In",
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -167,7 +167,7 @@ class LoginPage extends StatelessWidget {
 
                                 Scaffold.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text("Seja bem vindo $_email"),
+                                    content: Text('Welcome, $_email'),
                                   ),
                                 );
                               }
@@ -182,7 +182,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 15, bottom: 15),
                 child: Text(
-                  "... Ou então ...",
+                  "- OR -",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w300,
@@ -209,17 +209,16 @@ class LoginPage extends StatelessWidget {
                         width: 100,
                         child: Image.asset(
                           "assets/facebook.png",
-                          width: 26,
                         ),
                       ),
-                      Text("Entrar com o Facebook"),
+                      Text("Sign In with Facebook"),
                     ],
                   ),
                   onPressed: () {},
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Container(
                 width: double.infinity,
@@ -241,15 +240,14 @@ class LoginPage extends StatelessWidget {
                         width: 100,
                         child: Image.asset(
                           "assets/google.png",
-                          width: 26,
                         ),
                       ),
-                      Text("Entrar com o Google"),
+                      Text("Sign In with Google"),
                     ],
                   ),
                   onPressed: () {},
                 ),
-              ),
+              )
             ],
           ),
         ),

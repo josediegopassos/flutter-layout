@@ -30,11 +30,11 @@ class ProductCard extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProductPage(
-                    title: title,
-                    description: description,
-                    image: image,
-                    price: price,
-                  ),
+                        title: title,
+                        description: description,
+                        image: image,
+                        price: price,
+                      ),
                 ),
               );
             },
@@ -42,8 +42,8 @@ class ProductCard extends StatelessWidget {
               tag: image,
               child: Image.asset(
                 image,
-                width: 140,
-                height: 140,
+                width: 170,
+                height: 170,
                 fit: BoxFit.cover,
               ),
             ),
@@ -52,7 +52,7 @@ class ProductCard extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 40,
+            height: 60,
             child: Text(
               title,
               style: TextStyle(

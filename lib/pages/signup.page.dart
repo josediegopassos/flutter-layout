@@ -10,9 +10,8 @@ class SignupPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          //color: Color(0xFFF5F5F5),
           padding: EdgeInsets.only(
-            top: 60,
+            top: 80,
             left: 20,
             right: 20,
             bottom: 40,
@@ -20,7 +19,6 @@ class SignupPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                //height: 350,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -29,50 +27,49 @@ class SignupPage extends StatelessWidget {
                       offset: new Offset(1, 2.0),
                       blurRadius: 5,
                       spreadRadius: 1,
-                    )
+                    ),
                   ],
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    top: 30,
+                    left: 15,
+                    right: 15,
+                    top: 60,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       Text(
-                        "Registrar",
-                        textAlign: TextAlign.start,
+                        "Signup",
                         style: Theme.of(context).textTheme.display2,
+                      ),
+                      SizedBox(
+                        height: 60,
+                      ),
+                      TextFormField(
+                        // autofocus: true,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          labelText: "Name",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          ),
+                        ),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).primaryColor,
+                        ),
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       TextFormField(
-                        //autofocus: true,
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(
-                          labelText: "Nome",
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                          ),
-                        ),
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Theme.of(context).primaryColor,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      TextFormField(
-                        //autofocus: true,
+                        // autofocus: true,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
-                          labelText: "E-mail",
+                          labelText: "Email",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
@@ -85,14 +82,14 @@ class SignupPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       TextFormField(
-                        //autofocus: true,
+                        // autofocus: true,
                         keyboardType: TextInputType.text,
                         obscureText: true,
                         decoration: InputDecoration(
-                          labelText: "Senha",
+                          labelText: "Password",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
@@ -117,7 +114,7 @@ class SignupPage extends StatelessWidget {
                         ),
                         child: FlatButton(
                           child: Text(
-                            "Registrar",
+                            "Signup",
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -126,12 +123,12 @@ class SignupPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 40,
+                        height: 30,
                       ),
                     ],
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),

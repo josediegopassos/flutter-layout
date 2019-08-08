@@ -19,7 +19,7 @@ class AnimatedInput extends StatelessWidget {
         ),
         containerSizeAnim = Tween(
           begin: 60.0,
-          end: 240.0,
+          end: 280.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -55,7 +55,7 @@ class AnimatedInput extends StatelessWidget {
 
   Widget _animate(context, child) {
     return Container(
-      height: 50,
+      height: 60,
       decoration: BoxDecoration(
         color: containerColorAnim.value,
         borderRadius: BorderRadius.all(
@@ -71,19 +71,19 @@ class AnimatedInput extends StatelessWidget {
         child: Row(
           children: <Widget>[
             SizedBox(
-              width: 10,
+              width: 20,
             ),
             Icon(Icons.search),
             SizedBox(
-              width: 10,
+              width: 20,
             ),
             Container(
-              width: 180,
+              width: 200,
               child: TextFormField(
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  labelText: "Pesquisar...",
+                  labelText: "Search...",
                   labelStyle: TextStyle(
                     color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w300,

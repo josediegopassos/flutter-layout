@@ -8,50 +8,49 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(10),
-        //color: Color(0xFFF5F5F5),
+        padding: EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             SizedBox(
-              height: 30,
+              height: 60,
             ),
             SearchBox(),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Text(
-              "Categorias",
+              "Categories",
               style: Theme.of(context).textTheme.headline,
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Container(
               height: 90,
               child: CategoryList(),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  "Mais vendidos",
+                  "Best Selling",
                   style: Theme.of(context).textTheme.headline,
                 ),
                 FlatButton(
-                  child: Text("Ver todos"),
-                  onPressed: () {},
+                  child: Text("See All"),
+                  onPressed: () => {},
                 ),
               ],
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Container(
-              height: 270,
+              height: 350,
               child: ProductList(
                 scrollDirection: Axis.horizontal,
               ),
